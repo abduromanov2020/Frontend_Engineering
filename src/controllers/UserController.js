@@ -22,7 +22,15 @@ import users from "../data/users.js";
 const formatUser = (title) => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(users.map((item) => title + item.name));
+      resolve(
+        users.map((item) => {
+          return {
+            name: `${title} ${item.name}`,
+            age: item.age,
+            major: item.major,
+          };
+        })
+      );
     }, 3000);
   });
 };
