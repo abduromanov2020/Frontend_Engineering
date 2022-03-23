@@ -1,0 +1,50 @@
+.container {
+    padding: 1rem;
+    text-align: center;
+    background-color: #d5bdaf;
+    color: #2b2d42;
+}
+
+.movies { 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.movies__title {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.movie {
+    margin-bottom: 1rem;
+}
+
+.movie__image{
+    border-radius: 2rem;
+    max-width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+    .movie__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: start;
+    }
+
+    .movie {
+        flex-basis: 50%;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .movie {
+        padding: 1rem;
+        flex-basis: 25%;
+    }
+}
+    
+
+    
+

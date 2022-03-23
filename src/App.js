@@ -1,12 +1,25 @@
-import "./App.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
+import Form from "./components/Form/Form";
+import Hero from "./components/Hero/Hero";
+import Movies from "./components/Movies/Movies";
+import Navbar from "./components/Navbar/Navbar";
+
+
+function Main () {
+  return(
+    <main>
+      <Hero />
+      <Movies />
+      <Form />
+    </main>
+  )
+}
+
 
 function App() {
   return (
     <div>
-      <Header />
+      <Navbar />
       <Main />
       <Footer />
     </div>

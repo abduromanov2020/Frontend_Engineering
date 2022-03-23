@@ -1,0 +1,53 @@
+/* Small Screen */
+.container {
+    background-color: #2b2d42;
+    color: #d5bdaf;
+}
+
+.hero {
+    padding: 3rem;
+    text-align: center;
+}
+
+.hero__description {
+    margin:1rem 0
+}
+
+.hero__button {
+    padding: 0.6rem 1.6rem;
+    border-radius: .5rem;
+    border: none;
+    background-color: #d5bdaf;
+    font-weight: bold;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, .5);
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.hero__image {
+    width: 100%;
+    height: auto;
+    border-radius: 2rem;
+}
+
+/* Medium Screen */
+@media screen and (min-width: 768px) {
+    .hero {    
+        max-width: 1200px;
+        margin: 0 auto;    
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero__left {
+        flex-basis: 50%;
+    }
+
+    .hero__right {
+        flex-basis: 50%;
+    }
+
+}
