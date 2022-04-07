@@ -57,7 +57,7 @@ function Form(props) {
         }
 
         setMovies([...movies, movie]);
-        setIsImageError(false);
+        setIsGenreError(false);
     }
 
     return (
