@@ -1,0 +1,19 @@
+button {
+  background-color: #f7c59f;
+  font-family: "DM Sans", sans-serif;
+  font-weight: bold;
+  border: 2px solid transparent;
+  color: #111;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: transparent;
+  color: #f7c59f;
+  border: 2px solid #f7c59f;
+}

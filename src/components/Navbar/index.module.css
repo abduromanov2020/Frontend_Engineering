@@ -1,0 +1,42 @@
+.navbar {
+  background-color: #fff;
+}
+
+.container {
+  padding: 0.5rem 1rem;
+  color: #111;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.navbar__title h1 {
+  font-family: "DM Serif Display", serif;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "DM Sans", sans-serif;
+}
+
+li {
+  margin: 2rem 0rem;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    margin-right: 2rem;
+  }
+}

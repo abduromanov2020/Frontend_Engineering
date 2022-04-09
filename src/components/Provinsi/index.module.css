@@ -1,0 +1,29 @@
+.container {
+  padding: 7rem 2rem;
+  text-align: center;
+}
+
+.provinsi {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.provinsi__body {
+  overflow-x: auto;
+}
+
+.provinsi__table {
+  margin: 2rem auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  max-width: 1000px;
+}
+
+.provinsi__table th,
+td {
+  padding: 2rem 0;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 1px;
+}

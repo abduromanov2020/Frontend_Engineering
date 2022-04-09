@@ -1,0 +1,44 @@
+.container {
+  padding-bottom: 3rem;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  color: #111;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #fff;
+  font-family: "DM Sans", sans-serif;
+}
+
+.hero__title h1 {
+  font-family: "DM Serif Display", serif;
+}
+
+.hero__body {
+  margin: 1.2rem 0 2rem 0;
+  text-align: justify;
+}
+
+.hero__left {
+  margin: 2rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    padding: 4rem 2rem;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .hero {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .herp__left {
+    margin: 0;
+  }
+}

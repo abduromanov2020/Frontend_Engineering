@@ -1,0 +1,35 @@
+.card {
+  width: 100%;
+  background-color: #111;
+  margin: 2rem 0;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0.5rem 0.5rem 0.01rem rgba(255, 255, 255, 0.3);
+  border: 2px solid #fff;
+  transition: all 0.5s ease-in-out;
+}
+
+.status {
+  color: #fff;
+}
+
+.card:hover {
+  cursor: pointer;
+  border: 2px solid #f7c59f;
+  background: transparent;
+  box-shadow: 0.8rem 0.8rem 0.01rem rgba(255, 255, 255, 0.3);
+}
+
+.card:hover .status {
+  color: #f7c59f;
+}
+
+.card:nth-child(1) h2 {
+  color: #ea3546;
+}
+.card:nth-child(2) h2 {
+  color: #38b000;
+}
+.card:nth-child(3) h2 {
+  color: #5c677d;
+}

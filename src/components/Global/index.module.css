@@ -1,0 +1,25 @@
+.container {
+  padding: 0 2rem;
+  color: #fff;
+}
+
+.global {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.global__title {
+  text-align: center;
+}
+
+.global__update {
+  text-align: right;
+}
+
+@media screen and (min-width: 768px) {
+  .global__body {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+}
