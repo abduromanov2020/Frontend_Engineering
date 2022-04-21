@@ -45,7 +45,7 @@ function Form(props) {
 
     const data = newProvince.map(p =>
       p.kota === province.kota
-        ? { ...p, [status] : jumlah }
+        ? { ...p, [status] : p[status] += Number(jumlah) }
         : p
     );
 
@@ -89,7 +89,7 @@ function Form(props) {
                   <option value="kasus">Positif</option>
                   <option value="sembuh">Sembuh</option>
                   <option value="dirawat">Di Rawat</option>
-                  <option value="meinggal">Meninggal</option>
+                  <option value="meninggal">Meninggal</option>
                 </select>
                 {isStatusEmpty && <span>Status Wajib Di Isi</span>}
               </div>
