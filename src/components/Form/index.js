@@ -49,8 +49,6 @@ function Form(props) {
         : p
     );
 
-    console.log(data);
-
     setProvinces(data);
 
     setIsProvinsiEmpty(false);
