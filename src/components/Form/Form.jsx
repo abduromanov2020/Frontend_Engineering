@@ -1,6 +1,7 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
 import Alert from "../Alert/Alert";
+import Button from "../ui/Button";
 import styles from "./Form.module.css"
 
 function Form(props) {
@@ -124,7 +125,7 @@ function Form(props) {
                         <option value="Comedy">Comedy</option>
                     </select>
                     {isGenreError && <Alert>Genre Harus Di Isi</Alert>}
-                    <button className={styles.form__button}>Submit</button>
+                    <Button variant="secondary" full>Submit</Button>
                 </form>
             </section>
         </div>

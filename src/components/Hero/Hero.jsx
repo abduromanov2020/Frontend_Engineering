@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
-import styles from "./Hero.module.css"
+import styled from "styled-components";
+import Button from "../ui/Button";
 
 function Hero() {
     const [movies, setMovies] = useState('');
@@ -15,20 +16,50 @@ function Hero() {
 
     useEffect(fetchMovies, [])
 
+    const StyledHero = styled.div`
+        background-color: #2b2d42;
+        color: #d5bdaf;
+
+        section {
+            padding: 3rem;
+            text-align: center;
+        }
+
+        p {
+            margin: 1rem 0;
+        }
+
+        img {
+            border-radius: 2rem;
+        }
+
+        @media screen and (min-width: 768px) {
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+}
+    `
+
     return (
-        <div className={styles.container}>
-            <section className={styles.hero}>
-                <div className={styles.hero__left}>
-                    <h2 className={styles.hero__title}>{movies.Title}</h2>
-                    <h4 className={styles.hero__genre}>Genre : {movies.Genre}</h4>
-                    <p className={styles.hero__description}>{movies.Plot}</p>
-                    <button className={styles.hero__button}>Watch</button>
+        <StyledHero>
+            <section>
+                <div>
+                    <h2>{movies.Title}</h2>
+                    <h4>Genre : {movies.Genre}</h4>
+                    <p>{movies.Plot}</p>
+                    <Button size="lg">Watch More</Button>
                 </div>
-                <div className={styles.hero__right}>
-                    <img className={styles.hero__image} src={movies.Poster} alt={movies.Title} />
+                <div>
+                    <img src={movies.Poster} alt={movies.Title} />
                 </div>
             </section>
-        </div>
+        </StyledHero>
     );
 }
 

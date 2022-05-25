@@ -1,13 +1,19 @@
-import styles from "./Footer.module.css";
+import styled from "styled-components";
 
 function Footer() {
+
+    const StyledFooter = styled.footer`
+        background-color: #d5bdaf;
+        padding: 1rem;
+        color: #2b2d42;
+        text-align: center;
+    `
+
     return (
-        <div className={styles.container}>
-            <footer className={styles.footer}>
-                <h2 className={styles.footer__title}>Movie App</h2>
-                <p className={styles.footer__author}>Created by Alfatih</p>
-            </footer>
-        </div>
+        <StyledFooter>
+            <h2>Movie App</h2>
+            <p>Created by Alfatih</p>
+        </StyledFooter>
     );
 }
 
