@@ -1,44 +1,49 @@
 /* Small Screen */
 .container {
-    background-color: #d5bdaf;
-    padding: 1rem;
-    color: #2b2d42;
+  background-color: #d5bdaf;
+  padding: 1rem;
+  color: #2b2d42;
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .navbar__brand {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .navbar__list {
-    list-style: none;
+  list-style: none;
 }
 
 .navbar__item {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.navbar__link {
+  color: #2b2d42;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 768px) {
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-    .navbar__brand {
-        margin-bottom: 0;
-    }
+  .navbar__brand {
+    margin-bottom: 0;
+  }
 
-    .navbar__list {
-        display: flex;
-    }
+  .navbar__list {
+    display: flex;
+  }
 
-    .navbar__item {
-        margin:0 1rem;
-    }
+  .navbar__item {
+    margin: 0 1rem;
+  }
 }
