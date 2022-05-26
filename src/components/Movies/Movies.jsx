@@ -28,7 +28,6 @@ function Movies(props) {
                 <div className={styles.movie__container}>
                     {movies.map((movie) => <Movie key={movie.id} movie={movie} />)}
                 </div>
-                <button onClick={addMovie}>Add Movie</button>
             </section>
         </div>
     );
