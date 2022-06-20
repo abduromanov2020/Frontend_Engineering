@@ -10,7 +10,7 @@ function Home() {
     return (
         <div>
             <Hero />
-            <Movies movies={movies} setMovies={setMovies} />
+            <Movies movies={movies} setMovies={setMovies} title={"Latest Movie"}/>
             <Form movies={movies} setMovies={setMovies} />
         </div>
     )

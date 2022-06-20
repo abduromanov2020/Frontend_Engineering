@@ -2,6 +2,7 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import styled from "styled-components";
+import ENDPOINTS from "../../utils/constants/endpoints";
 import Button from "../ui/Button";
 
 function Hero() {
@@ -14,8 +15,7 @@ function Hero() {
 
 
     const getTrendingMovies = async () => {
-        const URL = `https://api.themoviedb.org/3/trending/all/day?api_key=${API_KEY}`
-        const res = await axios(URL)
+        const res = await axios(ENDPOINTS.TRENDING)
 
         return res.data.results[0];
 
@@ -40,7 +40,6 @@ function Hero() {
         color: #d5bdaf;
 
         section {
-            padding: 3rem;
             text-align: center;
         }
 
@@ -50,10 +49,14 @@ function Hero() {
 
         img {
             border-radius: 2rem;
+            max-width: 100%;
+            height: auto;
         }
+        
 
         @media screen and (min-width: 768px) {
         section {
+            min-height:400px;
             max-width: 1200px;
             margin: 0 auto;
             text-align: left;
@@ -62,19 +65,27 @@ function Hero() {
             align-items: center;
             justify-content: space-between;
         }
+        .poster {
+      flex-basis: 50%;
+    }
+    .info {
+      flex-basis: 60%;
+    }
+
+
 }
     `
 
     return (
         <StyledHero>
             <section>
-                <div>
+                <div className="info">
                     <h2>{movies.title}</h2>
                     <h4>Genre : {genres}</h4>
                     <p>{movies.overview}</p>
                     <Button as="a" href={`https://www.youtube.com/watch?v=${idTrailer}`} target="_blank">Watch More</Button>
                 </div>
-                <div>
+                <div className="poster">
                     <img src={`https://image.tmdb.org/t/p/w500/${movies.backdrop_path}`} alt={movies.Title} />
                 </div>
             </section>

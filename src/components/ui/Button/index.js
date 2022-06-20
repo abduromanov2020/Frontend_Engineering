@@ -20,7 +20,7 @@ const Button = styled.button`
     props.full &&
     css`
       display: block;
-      width: 100%;
+      width: 50%;
     `}
 `;
 
