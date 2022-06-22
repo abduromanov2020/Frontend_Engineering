@@ -9,6 +9,8 @@ import NowPlaying from "./pages/movie/NowPlaying";
 import Popular from "./pages/movie/Popular";
 import TopRated from "./pages/movie/TopRated";
 import theme from "./utils/constants/theme";
+import data from "./utils/constants/data";
+import { useState } from "react";
 
 function App() {
   return (

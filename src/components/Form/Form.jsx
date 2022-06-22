@@ -1,13 +1,18 @@
 import { nanoid } from "nanoid";
 import { useState } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router";
+import { addMovie } from "../../features/moviesSlice";
 import Alert from "../Alert/Alert";
 import Button from "../ui/Button";
 import styles from "./Form.module.css"
 
-function Form(props) {
+function Form() {
 
-    const { movies, setMovies } = props;
+    const nav = useNavigate();
 
+    const dispatch = useDispatch();
+    
     const [formData, setFormData] = useState({
         title: '',
         date: '',
@@ -73,7 +78,7 @@ function Form(props) {
         return true;
     }
 
-    const addMovie = () => {
+    const submitMovie = () => {
         const movie = {
             id: nanoid(),
             title: title,
@@ -83,7 +88,10 @@ function Form(props) {
                 image,
         }
 
-        setMovies([...movies, movie]);
+        dispatch(addMovie(movie))
+
+        nav('/');
+
         setFormData({
             title: '',
             date: '',
@@ -96,7 +104,7 @@ function Form(props) {
 
         e.preventDefault();
 
-        validate() && addMovie();
+        validate() && submitMovie();
 
     }
 

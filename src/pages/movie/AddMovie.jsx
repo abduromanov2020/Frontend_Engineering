@@ -1,9 +1,12 @@
 import React from 'react'
+import Form from '../../components/Form/Form'
+import Hero from '../../components/Hero/Hero'
 
 function AddMovie() {
     return (
         <div>
-            <h2>AddMovie</h2>
+            <Hero />
+            <Form />
         </div>
     )
 }
