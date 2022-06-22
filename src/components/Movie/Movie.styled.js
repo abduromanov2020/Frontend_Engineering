@@ -14,7 +14,7 @@ const StyledMovie = styled.div`
     margin-bottom: 0.5rem;
   }
   h3:hover {
-    color: #b5179e;
+    color: #64748b;
   }
   p {
     color: #64748b;
